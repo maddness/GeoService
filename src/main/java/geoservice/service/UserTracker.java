@@ -8,7 +8,6 @@ import geoservice.response.Response;
 import geoservice.response.UserLocationResponse;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
@@ -18,7 +17,6 @@ import static geoservice.utils.DistanceCalculator.calcDistance;
 /**
  * Created by Alexey Ostrikov on 26/03/2016.
  */
-@Service
 public class UserTracker {
     private static Logger LOG = LogManager.getLogger(UserUpdater.class);
 

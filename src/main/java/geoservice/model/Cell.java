@@ -50,9 +50,6 @@ public class Cell {
     public void decrementUserCount() {
         if (userCount > 0) {
             userCount--;
-        } else {
-            //TODO - do we need it???
-            throw new RuntimeException("Can't remove users from empty cell");
         }
     }
 

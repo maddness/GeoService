@@ -6,7 +6,6 @@ import geoservice.model.CellKey;
 import geoservice.response.ErrorResponse;
 import geoservice.response.Response;
 import geoservice.response.UserCountResponse;
-import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
@@ -16,7 +15,6 @@ import static geoservice.response.Status.SUCCESS;
 /**
  * Service to check user count for a particular cell.
  */
-@Service
 public class GridInformer {
 
     private final Map<CellKey, Cell> cellsMap;
