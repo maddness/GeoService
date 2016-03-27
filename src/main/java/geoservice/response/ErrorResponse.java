@@ -9,4 +9,8 @@ public class ErrorResponse implements Response {
     public ErrorResponse(String error) {
         this.error = error;
     }
+
+    public String getError() {
+        return error;
+    }
 }

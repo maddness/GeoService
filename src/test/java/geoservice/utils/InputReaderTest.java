@@ -12,9 +12,6 @@ import static geoservice.utils.InputReader.readUsers;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-/**
- * Created by Alexey Ostrikov on 26/03/2016.
- */
 public class InputReaderTest {
 
     @Test

@@ -6,18 +6,12 @@ package geoservice.response;
 public class UserCountResponse implements Response {
 
     private final int userCount;
-    private final Status status;
 
-    public UserCountResponse(int userCount, Status status) {
+    public UserCountResponse(int userCount) {
         this.userCount = userCount;
-        this.status = status;
     }
 
     public int getUserCount() {
         return userCount;
-    }
-
-    public Status getStatus() {
-        return status;
     }
 }

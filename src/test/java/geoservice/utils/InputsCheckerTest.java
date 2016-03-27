@@ -6,9 +6,6 @@ import static geoservice.utils.InputsChecker.validateCoordinatesForCell;
 import static geoservice.utils.InputsChecker.validateCoordinatesForUser;
 import static geoservice.utils.InputsChecker.validateMedianDistance;
 
-/**
- * Created by Alexey Ostrikov on 26/03/2016.
- */
 public class InputsCheckerTest {
 
     @Test

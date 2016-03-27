@@ -8,9 +8,6 @@ import java.util.Set;
 import static geoservice.model.CellKey.cellKeyFor;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by Alexey Ostrikov on 26/03/2016.
- */
 public class CellKeyTest {
 
     @Test(expected = NumberFormatException.class)

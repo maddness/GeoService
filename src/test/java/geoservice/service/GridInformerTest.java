@@ -1,8 +1,9 @@
 package geoservice.service;
 
 import geoservice.model.Cell;
+import geoservice.response.ErrorResponse;
+import geoservice.response.UserCountResponse;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -10,12 +11,11 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static geoservice.utils.StructureBuilder.createCellsMap;
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
 
-/**
- * Created by Alexey Ostrikov on 26/03/2016.
- */
 @RunWith(MockitoJUnitRunner.class)
 public class GridInformerTest {
 
@@ -33,15 +33,17 @@ public class GridInformerTest {
         gridInformer = new GridInformer(createCellsMap(newArrayList(cell)));
     }
 
-    @Ignore
     @Test
     public void shouldGetUserCountFromCell() {
-        assertEquals(237, gridInformer.getCellUserCount(20.3, 30.8));
+        UserCountResponse response = (UserCountResponse) gridInformer.getCellUserCount(20.3, 30.8);
+
+        assertEquals(237, response.getUserCount());
     }
 
-    @Ignore
-    @Test(expected = RuntimeException.class)
-    public void shouldThrowExceptionIfCellNotFound() {
-        assertEquals(237, gridInformer.getCellUserCount(10.3, 130.8));
+    @Test
+    public void shouldRespondWithErrorIfCellNotFound() {
+        ErrorResponse response = (ErrorResponse) gridInformer.getCellUserCount(10.3, 130.8);
+
+        assertThat(response.getError(), is("No cells were found for coordinates (10.3,130.8)"));
     }
 }

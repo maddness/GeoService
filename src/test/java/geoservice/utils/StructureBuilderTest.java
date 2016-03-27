@@ -17,9 +17,6 @@ import static geoservice.utils.StructureBuilder.createCellsMap;
 import static geoservice.utils.StructureBuilder.createUsersMap;
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by Alexey Ostrikov on 26/03/2016.
- */
 public class StructureBuilderTest {
 
     @Test(expected = RuntimeException.class)

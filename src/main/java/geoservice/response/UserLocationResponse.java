@@ -6,10 +6,10 @@ package geoservice.response;
 public class UserLocationResponse implements Response {
 
     private final String locationRange;
-    private final double distance;
+    private final int distance;
     private final double meanDiatance;
 
-    public UserLocationResponse(String locationRange, double distance, double meanDiatance) {
+    public UserLocationResponse(String locationRange, int distance, double meanDiatance) {
         this.locationRange = locationRange;
         this.distance = distance;
         this.meanDiatance = meanDiatance;
@@ -19,7 +19,7 @@ public class UserLocationResponse implements Response {
         return locationRange;
     }
 
-    public double getDistance() {
+    public int getDistance() {
         return distance;
     }
 
