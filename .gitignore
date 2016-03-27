@@ -16,6 +16,6 @@
 .idea_modules/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.ear

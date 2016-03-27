@@ -20,11 +20,13 @@ def calc_avg_distance(lat, lon):
     result = acos(sin(lat_x) * sin(lat_y) + cos(lat_x) * cos(lat_y) * cos(abs(lon_x - lon_y)))
     return int(result * 6372795 / sqrt(2))
 
+
 def create_users_list():
     users = []
     for i, val in enumerate(range(users_number)):
         users.append(
-            (i + 1, random_in_range(latitude_range[0], latitude_range[1]), random_in_range(longitude_range[0], longitude_range[1])))
+            (i + 1, random_in_range(latitude_range[0], latitude_range[1]),
+             random_in_range(longitude_range[0], longitude_range[1])))
     print(len(users), 'users created')
     return users
 
@@ -41,9 +43,8 @@ def create_table(file_name, items):
 
 
 if __name__ == "__main__":
-
-    latitude_range = (1, 50)       # should be in range [-90, 90)
-    longitude_range = (1, 20)      # should be in range [-180, 180)
+    latitude_range = (1, 50)  # should be in range [-90, 90)
+    longitude_range = (1, 20)  # should be in range [-180, 180)
 
     users_number = 100000
 
