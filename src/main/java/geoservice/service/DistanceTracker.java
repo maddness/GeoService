@@ -13,7 +13,7 @@ import static geoservice.model.CellKey.cellKeyFor;
 import static geoservice.utils.DistanceCalculator.distanceBetween;
 
 /**
- * Service to get information about user location and distance
+ * Service to get information about user location and distance.
  */
 public class DistanceTracker {
 
@@ -46,7 +46,7 @@ public class DistanceTracker {
 
         int distance = distanceBetween(lat, lon, user.getLat(), user.getLon());
         double meanDistance = user.getCell().getMeanDistance();
-        String distanceRange = distance <= meanDistance ? "close to the label" : "far away from the label";
+        String distanceRange = distance <= meanDistance ? "рядом с меткой" : "вдали от метки";
 
         return success(distanceRange, distance, meanDistance);
     }

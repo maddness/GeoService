@@ -1,7 +1,7 @@
 package geoservice.response;
 
 /**
- * Response ...
+ * Response with information about result of user update or creation of a new user.
  */
 public class UserUpdateResponse implements Response {
 

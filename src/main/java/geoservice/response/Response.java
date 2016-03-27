@@ -1,6 +1,6 @@
 package geoservice.response;
 
 /**
- * Created by Alexey Ostrikov on 26/03/2016.
+ * General interface for all types of responses.
  */
 public interface Response {}

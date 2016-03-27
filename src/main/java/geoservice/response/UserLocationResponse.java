@@ -1,18 +1,21 @@
 package geoservice.response;
 
 /**
- * Created by Alexey Ostrikov on 26/03/2016.
+ * Response with information about user location:
+ * 1. distance from input coordinates to last user label,
+ * 2. mean distance of a current user cell, according to input
+ * 3. whether current user location is near or far away from the label.
  */
 public class UserLocationResponse implements Response {
 
     private final String locationRange;
     private final int distance;
-    private final double meanDiatance;
+    private final double meanDistance;
 
-    public UserLocationResponse(String locationRange, int distance, double meanDiatance) {
+    public UserLocationResponse(String locationRange, int distance, double meanDistance) {
         this.locationRange = locationRange;
         this.distance = distance;
-        this.meanDiatance = meanDiatance;
+        this.meanDistance = meanDistance;
     }
 
     public String getLocationRange() {
@@ -23,7 +26,7 @@ public class UserLocationResponse implements Response {
         return distance;
     }
 
-    public double getMeanDiatance() {
-        return meanDiatance;
+    public double getMeanDistance() {
+        return meanDistance;
     }
 }

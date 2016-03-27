@@ -37,6 +37,7 @@ public class StructureBuilder {
                         "(" + cell.getLat() + "," + cell.getLon() + ") found. Primary key violation.");
             }
         }
+        LOG.info(cellsMap.size() +  " cells were loaded");
         return cellsMap;
     }
 
@@ -66,6 +67,7 @@ public class StructureBuilder {
                         "Primary key violation.");
             }
         }
+        LOG.info(usersMap.size() + " users were loaded");
         return usersMap;
     }
 }

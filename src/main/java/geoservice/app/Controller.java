@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Controller to handle HTTP requests
+ * Main controller to handle HTTP requests.
  */
 @RestController
 public class Controller {
@@ -61,9 +61,4 @@ public class Controller {
             return new ErrorResponse(e.getMessage());
         }
     }
-
-//    @RequestMapping("/error")
-//    public Response error() {
-//            return new ErrorResponse("Invalid URL");
-//    }
 }

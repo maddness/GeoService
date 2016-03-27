@@ -1,7 +1,7 @@
 package geoservice.response;
 
 /**
- * Created by Alexey Ostrikov on 26/03/2016.
+ * Response with information about number of users inside the cell.
  */
 public class UserCountResponse implements Response {
 

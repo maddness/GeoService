@@ -1,7 +1,7 @@
 package geoservice.response;
 
 /**
- * Created by Alexey Ostrikov on 26/03/2016.
+ * Response with error description, will be sent in case of unsuccessful operation.
  */
 public class ErrorResponse implements Response {
     private final String error;

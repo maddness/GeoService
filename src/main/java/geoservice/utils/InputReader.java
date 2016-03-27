@@ -2,8 +2,6 @@ package geoservice.utils;
 
 import geoservice.model.Cell;
 import geoservice.model.User;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -18,9 +16,6 @@ import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
 
 public class InputReader {
-
-    private static Logger LOG = LogManager.getLogger(InputReader.class);
-
     /**
      * Process cells file and creates list of cells.
      *
@@ -43,7 +38,6 @@ public class InputReader {
                         parseDouble(values[2])
                 ));
             }
-            LOG.info(cells.size() + " cells were loaded");
         } catch (IOException e) {
             throw new RuntimeException("Problem with processing grid file");
         } catch (NumberFormatException e) {
@@ -75,7 +69,6 @@ public class InputReader {
                         parseDouble(values[2])
                 ));
             }
-            LOG.info(users.size() + " users were loaded");
         } catch (IOException e) {
             throw new RuntimeException("Problem with processing users file");
         } catch (NumberFormatException e) {

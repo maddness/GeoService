@@ -52,14 +52,14 @@ public class UserUpdater {
     private Response createNewUser(int userId, double lat, double lon) {
         Cell cell = cellsMap.get(cellKeyFor(lat, lon));
         if (cell == null) {
-            return failure("No cells were found for coordinates (" + cellKeyFor(lat, lon) + "). User can't be created.");
+            return failure("No cells were found for coordinates: (" + cellKeyFor(lat, lon) + "). User can't be created");
         } else {
             User newUser = newUser(userId, lat, lon);
             newUser.setCell(cell);
             cell.incrementUserCount();
             usersMap.put(userId, newUser);
 
-            return success("New user created: id: " + userId + ", coordinates: (" + lat + "," + lon + ")");
+            return success("New user created with id: " + userId + ", coordinates: (" + lat + "," + lon + ")");
         }
     }
 
@@ -71,12 +71,12 @@ public class UserUpdater {
         if (newCell == null) {
             return failure("No cells were found for coordinates: (" + cellKeyFor(lat, lon) + "). User can't be updated");
         }
-
         Cell oldCell = user.getCell();
         if (oldCell != null) {
             oldCell.decrementUserCount();
         }
-
+        user.setLat(lat);
+        user.setLon(lon);
         newCell.incrementUserCount();
         user.setCell(newCell);
 

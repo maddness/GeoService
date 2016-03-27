@@ -3,7 +3,7 @@ package geoservice.model;
 import static geoservice.utils.InputsChecker.validateCoordinatesForUser;
 
 /**
- * User object with id, coordinates and current cell
+ * User object with id, coordinates and current cell.
  */
 public class User {
     private final int id;

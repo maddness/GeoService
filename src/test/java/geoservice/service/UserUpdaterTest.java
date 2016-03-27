@@ -20,6 +20,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class UserUpdaterTest {
+
     private UserUpdater userUpdater;
 
     @Before
@@ -44,7 +45,7 @@ public class UserUpdaterTest {
     public void shouldAddNewUser() {
         UserUpdateResponse response = (UserUpdateResponse) userUpdater.addOrUpdateUser(520, 1.3, 2.8);
 
-        assertThat(response.getMessage(), is("New user created: id: 520, coordinates: (1.3,2.8)"));
+        assertThat(response.getMessage(), is("New user created with id: 520, coordinates: (1.3,2.8)"));
     }
 
     @Test
@@ -72,6 +73,6 @@ public class UserUpdaterTest {
     public void shouldNotAddUserIfCellNotFound() {
         ErrorResponse response = (ErrorResponse) userUpdater.addOrUpdateUser(520, 2.3, 2.8);
 
-        assertThat(response.getError(), is("No cells were found for coordinates (2,2). User can't be created."));
+        assertThat(response.getError(), is("No cells were found for coordinates: (2,2). User can't be created"));
     }
 }
