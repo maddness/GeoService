@@ -1,7 +1,5 @@
 package geoservice.utils;
 
-import java.math.BigDecimal;
-
 import static java.lang.Double.isInfinite;
 import static java.lang.Double.isNaN;
 import static java.lang.Math.*;
@@ -33,9 +31,5 @@ public class DistanceCalculator {
         }
 
         return (int) (result * EARTH_RADIUS_METERS);
-    }
-
-    private static BigDecimal bd(double val) {
-        return BigDecimal.valueOf(val);
     }
 }

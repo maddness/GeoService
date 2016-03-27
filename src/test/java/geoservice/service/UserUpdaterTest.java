@@ -24,11 +24,11 @@ public class UserUpdaterTest {
     private UserUpdater userUpdater;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         List<Cell> cells = newArrayList(
-                newCell(1, 1, 1),           // 2 users
-                newCell(1, 2, 1),           // 0 users
-                newCell(1, 3, 1));          // 1 user
+                newCell(1, 1, 100000),           // 2 users
+                newCell(1, 2, 100000),           // 0 users
+                newCell(1, 3, 100000));          // 1 user
 
         List<User> users = newArrayList(
                 newUser(777, 1.5, 1.8),     // cell 1

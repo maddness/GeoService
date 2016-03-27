@@ -13,7 +13,7 @@ import static geoservice.model.CellKey.cellKeyFor;
 import static geoservice.utils.DistanceCalculator.distanceBetween;
 
 /**
- * Service to get information about user location and distance.
+ * Service to get the information about previous and new locations of a user.
  */
 public class DistanceTracker {
 
@@ -26,12 +26,12 @@ public class DistanceTracker {
     }
 
     /**
-     * Blah blah...
+     * Returns information about previous and new user locations.
      *
-     * @param userId
-     * @param lat
-     * @param lon
-     * @return
+     * @param userId user ID
+     * @param lat user latitude
+     * @param lon user longitude
+     * @return information about user location
      */
     public Response getLocationDetails(int userId, double lat, double lon) {
         User user = usersMap.get(userId);
@@ -41,11 +41,11 @@ public class DistanceTracker {
 
         Cell cell = cellsMap.get(cellKeyFor(lat, lon));
         if (cell == null) {
-            return failure("No cells were found for coordinates (" + cellKeyFor(lat, lon) + ")");
+            return failure("No cells were found for coordinates: (" + cellKeyFor(lat, lon) + ")");
         }
 
         int distance = distanceBetween(lat, lon, user.getLat(), user.getLon());
-        double meanDistance = user.getCell().getMeanDistance();
+        double meanDistance = cell.getMeanDistance();
         String distanceRange = distance <= meanDistance ? "рядом с меткой" : "вдали от метки";
 
         return success(distanceRange, distance, meanDistance);

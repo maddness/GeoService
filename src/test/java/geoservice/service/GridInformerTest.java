@@ -25,7 +25,7 @@ public class GridInformerTest {
     private GridInformer gridInformer;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         when(cell.getLat()).thenReturn(20);
         when(cell.getLon()).thenReturn(30);
         when(cell.getUserCount()).thenReturn(237);

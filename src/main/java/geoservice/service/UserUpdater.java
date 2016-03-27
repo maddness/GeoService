@@ -30,7 +30,7 @@ public class UserUpdater {
     }
 
     /**
-     * Public method to add new user or update the existing one
+     * Adds new user or update the existing one
      * @param userId user ID
      * @param lat user latitude
      * @param lon user longitude
