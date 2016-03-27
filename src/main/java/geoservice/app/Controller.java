@@ -20,10 +20,50 @@ public class Controller {
         this.serviceProvider = serviceProvider;
     }
 
-    @RequestMapping("/greeting")
-    public Response greeting(@RequestParam(value="name", defaultValue="World") String name) {
-//        return serviceProvider.addOrUpdateUser(200, 34, 53);
-        return new ErrorResponse("Hohoho!");
+
+    /**
+     * Template http://localhost:8080/cell_info?lat=12&lon=11
+     */
+    @RequestMapping("/cell_info")
+    public Response cellInfo(@RequestParam(value = "lat") double lat,
+                             @RequestParam(value = "lon") double lon) {
+        try {
+            return serviceProvider.getCellUserCount(lat, lon);
+        } catch (Exception e) {
+            return new ErrorResponse(e.getMessage());
+        }
     }
 
+    /**
+     * Template http://localhost:8080/update_user?id=123&lat=2&lon=1
+     */
+    @RequestMapping("/update_user")
+    public Response update_user(@RequestParam(value = "id") int userId,
+                                @RequestParam(value = "lat") double lat,
+                                @RequestParam(value = "lon") double lon) {
+        try {
+            return serviceProvider.addOrUpdateUser(userId, lat, lon);
+        } catch (Exception e) {
+            return new ErrorResponse(e.getMessage());
+        }
+    }
+
+    /**
+     * Template http://localhost:8080/location?id=123&lat=2&lon=1
+     */
+    @RequestMapping("/location")
+    public Response userLocation(@RequestParam(value = "id") int userId,
+                                 @RequestParam(value = "lat") double lat,
+                                 @RequestParam(value = "lon") double lon) {
+        try {
+            return serviceProvider.getLocationDetails(userId, lat, lon);
+        } catch (Exception e) {
+            return new ErrorResponse(e.getMessage());
+        }
+    }
+
+//    @RequestMapping("/error")
+//    public Response error() {
+//            return new ErrorResponse("Invalid URL");
+//    }
 }

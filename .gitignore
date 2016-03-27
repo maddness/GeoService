@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
-*.iml
+#*.iml
 
 ## Directory-based project format:
 .idea/
@@ -10,6 +10,7 @@
 
 # IntelliJ
 /out/
+/target/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/

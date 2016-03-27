@@ -32,15 +32,6 @@ public class DistanceCalculatorTest {
     }
 
     @Test
-    public void should1CalculateVerySmallDistance() {
-        System.out.println(distanceBetween(
-                25, 25,
-                26, 26
-        ));
-        // 111226
-    }
-
-    @Test
     public void shouldCalculateZeroDistance() {
         assertEquals(0, distanceBetween(55.75396, 37.620393, 55.75396, 37.620393));
         assertEquals(0, distanceBetween(0, 0, 0, 0));
