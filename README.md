@@ -28,15 +28,15 @@ $ java -jar geoservice-1.0.0.jar <path_to_cells_file> <path_to_users_file>
 
 Расчет категории местоположения для пользователя по координатам
 
-http://localhost:8080/location?user_id=1&lat=38.608121&lon=6.017976
+> http://localhost:8080/location?user_id=1&lat=38.608121&lon=6.017976
 
 Добавление пользователя с меткой / изменение метки пользователя
 
-http://localhost:8080/update_user?user_id=1&lat=38.608121&lon=6.017976
+> http://localhost:8080/update_user?user_id=1&lat=38.608121&lon=6.017976
 
 Получить количество пользователей с меткой в данной ячейке
 
-http://localhost:8080/cell_info?lat=1&lon=1
+> http://localhost:8080/cell_info?lat=1&lon=1
 
 
 
