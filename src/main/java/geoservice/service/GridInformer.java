@@ -33,7 +33,7 @@ public class GridInformer {
     public Response getCellUserCount(double lat, double lon) {
         Cell cell = cellsMap.get(cellKeyFor(lat, lon));
         if (cell == null) {
-            return new ErrorResponse("No cells were found for coordinates (" + lat + "," + lon + ")");
+            return new ErrorResponse("No cells were found for coordinates: (" + lat + "," + lon + ")");
         } else {
             return new UserCountResponse(cell.getUserCount());
         }

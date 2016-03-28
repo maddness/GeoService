@@ -4,11 +4,9 @@ import geoservice.model.Cell;
 import geoservice.model.CellKey;
 import geoservice.model.User;
 import geoservice.response.Response;
-import geoservice.service.GridInformer;
 import geoservice.service.DistanceTracker;
+import geoservice.service.GridInformer;
 import geoservice.service.UserUpdater;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -25,8 +23,6 @@ import static geoservice.utils.StructureBuilder.createUsersMap;
  */
 @Component
 public class ServiceProvider {
-
-    private static Logger LOG = LogManager.getLogger(ServiceProvider.class);
 
     private GridInformer gridInformer;
     private DistanceTracker distanceTracker;
@@ -52,11 +48,10 @@ public class ServiceProvider {
     private void showApiUsage(Cell cell, User user) {
         String userURL = "id=" + user.getId() + "&lat=" + user.getLat() + "&lon=" + user.getLon();
         String cellURL = "lat=" + cell.getLat() + "&lon=" + cell.getLon();
-
-        LOG.info("GeoService HTTP API usage examples");
-        System.out.println("http://localhost:8080/cell_info?" + cellURL + "   - users count for a cell");
+        System.out.println("\n--- API usage examples ---");
+        System.out.println("http://localhost:8080/cell_info?" + cellURL + "   - user count for a cell");
         System.out.println("http://localhost:8080/update_user?" + userURL + "   - update user with new coordinates");
-        System.out.println("http://localhost:8080/location?" + userURL + "   - user location details");
+        System.out.println("http://localhost:8080/location?" + userURL + "   - user location details\n");
     }
 
     public Response addOrUpdateUser(int userId, double lat, double lon) {

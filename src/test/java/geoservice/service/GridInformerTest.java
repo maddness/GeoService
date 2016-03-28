@@ -44,6 +44,6 @@ public class GridInformerTest {
     public void shouldRespondWithErrorIfCellNotFound() {
         ErrorResponse response = (ErrorResponse) gridInformer.getCellUserCount(10.3, 130.8);
 
-        assertThat(response.getError(), is("No cells were found for coordinates (10.3,130.8)"));
+        assertThat(response.getError(), is("No cells were found for coordinates: (10.3,130.8)"));
     }
 }
