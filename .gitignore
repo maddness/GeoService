@@ -20,3 +20,6 @@
 *.iml
 *.war
 *.ear
+
+# Other files
+.ipynb_checkpoints

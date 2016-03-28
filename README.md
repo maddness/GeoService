@@ -38,6 +38,10 @@ $ java -jar geoservice-1.0.0.jar <path_to_cells_table> <path_to_users_table>
 
 > http://localhost:8080/cell_info?lat=1&lon=1
 
+### Задача о равномерной географической сетке
+
+Вариант разбиения с описанием подхода предложен в файле *healpy/HEALPix_magic.ipynb*
+
 
 
 
