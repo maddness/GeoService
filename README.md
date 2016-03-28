@@ -21,7 +21,7 @@
 Команда для запуска сервиса:
 
 ```sh
-$ java -jar geoservice-1.0.0.jar <path_to_cells_file> <path_to_users_file>
+$ java -jar geoservice-1.0.0.jar <path_to_cells_table> <path_to_users_table>
 ```
 
 ### Примеры HTTP запросов

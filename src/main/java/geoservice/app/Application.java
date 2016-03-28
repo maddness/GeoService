@@ -14,7 +14,7 @@ public class Application {
     public static void main(String[] args) {
         if (args.length < 2) {
             System.out.println(Arrays.toString(args));
-            System.out.println("Usage: java -jar geoservice-1.0.0.jar <path_to_cells_file> <path_to_users_file>");
+            System.out.println("Usage: java -jar geoservice-1.0.0.jar <path_to_cells_table> <path_to_users_table>");
             System.exit(1);
         }
 
