@@ -35,10 +35,10 @@ public class Controller {
     }
 
     /**
-     * Template http://localhost:8080/update_user?id=123&lat=2&lon=1
+     * Template http://localhost:8080/update_user?user_id=123&lat=2&lon=1
      */
     @RequestMapping("/update_user")
-    public Response update_user(@RequestParam(value = "id") int userId,
+    public Response update_user(@RequestParam(value = "user_id") int userId,
                                 @RequestParam(value = "lat") double lat,
                                 @RequestParam(value = "lon") double lon) {
         try {
@@ -49,10 +49,10 @@ public class Controller {
     }
 
     /**
-     * Template http://localhost:8080/location?id=123&lat=2&lon=1
+     * Template http://localhost:8080/location?user_id=123&lat=2&lon=1
      */
     @RequestMapping("/location")
-    public Response userLocation(@RequestParam(value = "id") int userId,
+    public Response userLocation(@RequestParam(value = "user_id") int userId,
                                  @RequestParam(value = "lat") double lat,
                                  @RequestParam(value = "lon") double lon) {
         try {

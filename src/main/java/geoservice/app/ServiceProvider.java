@@ -46,7 +46,7 @@ public class ServiceProvider {
     }
 
     private void showApiUsage(Cell cell, User user) {
-        String userURL = "id=" + user.getId() + "&lat=" + user.getLat() + "&lon=" + user.getLon();
+        String userURL = "user_id=" + user.getId() + "&lat=" + user.getLat() + "&lon=" + user.getLon();
         String cellURL = "lat=" + cell.getLat() + "&lon=" + cell.getLon();
         System.out.println("\n--- API usage examples ---");
         System.out.println("http://localhost:8080/cell_info?" + cellURL + "   - user count for a cell");
