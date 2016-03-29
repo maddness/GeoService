@@ -42,7 +42,7 @@ $ java -jar geoservice-1.0.0.jar <path_to_cells_table> <path_to_users_table>
 
 Вариант разбиения с описанием подхода предложен в файле: *healpy/HEALPix_magic.ipynb*
 
-Формат - Jupiter Notebook
+Формат - Jupiter Notebook, можно просматривать напрямую из гитхаба.
 
 
 
