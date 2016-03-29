@@ -7,6 +7,7 @@ import static geoservice.utils.InputsChecker.validateMedianDistance;
  * Cell object with coordinates, mean distance and user count.
  */
 public class Cell {
+
     private final int lat;
     private final int lon;
     private final double meanDistance;

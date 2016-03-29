@@ -6,6 +6,7 @@ import static geoservice.utils.InputsChecker.validateCoordinatesForUser;
  * User object with id, coordinates and current cell.
  */
 public class User {
+
     private final int id;
 
     private double lat;

@@ -20,7 +20,6 @@ public class Controller {
         this.serviceProvider = serviceProvider;
     }
 
-
     /**
      * Template http://localhost:8080/cell_info?lat=12&lon=11
      */

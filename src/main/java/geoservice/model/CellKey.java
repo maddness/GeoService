@@ -6,6 +6,7 @@ import static geoservice.utils.InputsChecker.validateCoordinatesForCell;
  * Immutable object to be used as a key in a map of cells.
  */
 public final class CellKey {
+
     private final int lat;
     private final int lon;
 
